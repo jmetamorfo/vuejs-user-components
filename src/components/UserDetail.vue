@@ -4,6 +4,7 @@
         <p>Many Details</p>
         <p>User name: {{ switchName() }}</p>
         <button @click="resetName">Reset name</button>
+        <button @click="resetFn()">Reset by callback</button>
     </div>
 </template>
 
@@ -13,7 +14,8 @@
         myName: {
           type: String,
           default: 'secret'
-        }
+        },
+        resetFn: Function
       },
       methods: {
         switchName() {
